@@ -11,7 +11,7 @@ const initialState = {
 };
 
 export const authSlice = createSlice({
-  name: "authqsdf",
+  name: "auth",
   initialState,
   reducers: {},
   extraReducers: () => {},
