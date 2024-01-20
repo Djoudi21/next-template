@@ -1,6 +1,10 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
 import StoreProvider from "@/store/storeProvider";
 
 export default function App({ Component, pageProps }: AppProps) {
-    return <StoreProvider><Component {...pageProps} /></StoreProvider>
+  return (
+    <StoreProvider>
+      <Component {...pageProps} />
+    </StoreProvider>
+  );
 }

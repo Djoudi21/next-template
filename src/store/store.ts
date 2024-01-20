@@ -1,18 +1,18 @@
-import {combineReducers, configureStore} from '@reduxjs/toolkit'
-import {authSlice} from "@/store/auth/authSlice";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { authSlice } from "@/store/auth/authSlice";
 
 export const rootReducer = combineReducers({
-    [authSlice.name]: authSlice.reducer,
-})
+  [authSlice.name]: authSlice.reducer,
+});
 
 export const makeStore = () => {
-    return configureStore({
-        reducer: rootReducer
-    })
-}
+  return configureStore({
+    reducer: rootReducer,
+  });
+};
 
 // Infer the type of makeStore
-export type AppStore = ReturnType<typeof makeStore>
+export type AppStore = ReturnType<typeof makeStore>;
 // Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<AppStore['getState']>
-export type AppDispatch = AppStore['dispatch']
+export type RootState = ReturnType<AppStore["getState"]>;
+export type AppDispatch = AppStore["dispatch"];
